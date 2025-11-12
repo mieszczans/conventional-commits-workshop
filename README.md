@@ -4,7 +4,7 @@
 
 ---
 
-## 🧩 Updated User Story
+## 🧩 User Story - FRON-909012
 
 **Title:**  
 _As a user, I want to sign in using my Google or GitHub account and manage my subscription tier from a secure dashboard, so that I can access premium features easily._
