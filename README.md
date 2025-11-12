@@ -1,24 +1,37 @@
-# User Story: Secure Authentication & Dashboard System
+# User Story: Secure Authentication & Dashboard System (Updated with Breaking Changes)
+
+**Date:** 2025-11-12
 
 ---
 
-## 🧩 User Story
+## 🧩 Updated User Story
 
 **Title:**  
-_As a user, I want to create an account, log in, and manage my profile from a secure dashboard, so that I can personalize my experience in the web app._
+_As a user, I want to sign in using my Google or GitHub account and manage my subscription tier from a secure dashboard, so that I can access premium features easily._
+
+---
+
+### **Business Context**
+
+After the MVP launch, **investors requested** a pivot:
+
+- Replace manual registration with **OAuth2 social login (Google & GitHub)**.
+- Introduce **subscription tiers (Free / Pro / Enterprise)** to the dashboard.
+- Remove password-based authentication entirely.
+
+This decision affects both **frontend and backend** architecture, and it introduces **breaking changes** to existing APIs and user data structures.
 
 ---
 
 ### **Acceptance Criteria**
 
-1. Users can register with email, password, and name.
-2. The app validates inputs and provides meaningful errors.
-3. Users can log in and receive a JWT token.
-4. Users can reset their password via email.
-5. Users see a personalized dashboard with profile info.
-6. The design matches the app’s theme and is mobile-responsive.
-7. The codebase has CI/CD pipelines, unit & integration tests.
-8. Documentation is available for developers and users.
-9. App follows secure coding and performance best practices.
+1. Users can sign in using Google or GitHub.
+2. The previous email/password registration flow is removed.
+3. The dashboard shows subscription status and upgrade options.
+4. Existing users are migrated or prompted to reauthenticate.
+5. OAuth2 tokens are securely stored and refreshed.
+6. New “Pro” and “Enterprise” subscription features are displayed.
+7. CI/CD and documentation reflect the new flow.
+8. Old API endpoints for `/auth/register` and `/auth/login` are deprecated.
 
 ---
